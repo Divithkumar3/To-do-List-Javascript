@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        button{
+            background-color: rgb(241, 60, 6);
+            color: rgb(250, 249, 249);
+             width: 80px;
+            height: 35px;
+            position: relative;
+            left: 20px;
+            
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            
+        }
+        h1{
+            color: rgb(10, 235, 14);
+        }
+        .container{
+            width: 550px;
+            height: 500px;
+            background-color: rgb(248, 246, 246);
+            position: relative;
+            left: 300px;
+            
+        }
+        .content{
+            position: relative;
+            top: 100px;
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+        <h1>BUILD TO-DO LIST</h1>
+        <input type="text" id="add" placeholder="Add some task">
+        <button onclick="content()">ADD</button>
+        <div id="place"></div>
+    </div></div>
+     <script>
+        function content() {
+            const value1 = document.getElementById("add").value;
+            if (value1.length > 0) {
+                document.getElementById("place").innerHTML += "<div class='value1'>" + value1 + "<button onclick='deleteitem(this)'>DELETE</button></div>";
+            }
+            document.getElementById("Input").value = "";
+        }
+        function deleteitem(element) {
+            element.parentElement.remove();
+        }
+
+       
+
+
+     </script>
+</body>
+</html>
